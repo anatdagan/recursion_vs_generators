@@ -1,0 +1,16 @@
+<script>
+    const mmz = [0,1]
+    let res = 0
+    function fibonnachi(n) {
+        if (mmz.length > n) {
+            return mmz[n]
+        }
+        mmz.push(fibonnachi(n-1) + fibonnachi(n-2));
+        return mmz[n];
+    } 
+    
+    console.log(fibonnachi(40000));
+    
+
+
+</script>
