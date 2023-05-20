@@ -1,5 +1,5 @@
 <script>
-    async function* fibonacci(n) {
+    function* fibonacci(n) {
         let cur = 0, next = 1; i = 0;
         while (i < n) {
             yield cur;
@@ -9,9 +9,10 @@
     }
     
     
-    async function main() {
-        for await (const value of fibonacci(40000)) {
-        console.log("value", value);
+    function main() {
+        for (const value of fibonacci(40000)) {
+            console.log("value", value);
         }
     }
+    main();
   </script>
